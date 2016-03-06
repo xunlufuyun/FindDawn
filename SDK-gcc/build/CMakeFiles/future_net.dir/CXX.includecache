@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/future_net.cpp
+route.h
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/route.h
+lib_io.h
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/lib_io.h
+lib_time.h
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/lib_time.h
+
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/lib/lib_io.h
+
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/lib/lib_record.h
+
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/lib/lib_time.h
+
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/route.cpp
+route.h
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/route.h
+lib_record.h
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/lib_record.h
+stdio.h
+-
+
+/home/xiaoming/work/huawei/FindDawn/SDK-gcc/future_net/route.h
+
