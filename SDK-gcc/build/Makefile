@@ -150,6 +150,33 @@ future_net.cpp.s:
 	$(MAKE) -f CMakeFiles/future_net.dir/build.make CMakeFiles/future_net.dir/future_net.cpp.s
 .PHONY : future_net.cpp.s
 
+graphic.o: graphic.cpp.o
+
+.PHONY : graphic.o
+
+# target to build an object file
+graphic.cpp.o:
+	$(MAKE) -f CMakeFiles/future_net.dir/build.make CMakeFiles/future_net.dir/graphic.cpp.o
+.PHONY : graphic.cpp.o
+
+graphic.i: graphic.cpp.i
+
+.PHONY : graphic.i
+
+# target to preprocess a source file
+graphic.cpp.i:
+	$(MAKE) -f CMakeFiles/future_net.dir/build.make CMakeFiles/future_net.dir/graphic.cpp.i
+.PHONY : graphic.cpp.i
+
+graphic.s: graphic.cpp.s
+
+.PHONY : graphic.s
+
+# target to generate assembly for a file
+graphic.cpp.s:
+	$(MAKE) -f CMakeFiles/future_net.dir/build.make CMakeFiles/future_net.dir/graphic.cpp.s
+.PHONY : graphic.cpp.s
+
 route.o: route.cpp.o
 
 .PHONY : route.o
@@ -189,6 +216,9 @@ help:
 	@echo "... future_net.o"
 	@echo "... future_net.i"
 	@echo "... future_net.s"
+	@echo "... graphic.o"
+	@echo "... graphic.i"
+	@echo "... graphic.s"
 	@echo "... route.o"
 	@echo "... route.i"
 	@echo "... route.s"
