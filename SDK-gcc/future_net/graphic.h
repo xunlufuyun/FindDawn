@@ -37,10 +37,15 @@ public:
 	static const unsigned short MAX_DIST = 65535;
 	static const short NO_PATH = -1;
 
+	const std::unordered_map<unsigned short, unsigned short>& get_vertex_name() const
+	{
+		return vertex_name;
+	}
+
 private:
 	//int edge_num;
 	//int node_num;
-	std::unordered_map<int, int> vertex_name;	// vertex to index 
+	std::unordered_map<unsigned short, unsigned short> vertex_name;	// vertex to index 
 	std::vector<node_type> data;			// adjacent list
 };
 
