@@ -38,22 +38,22 @@ void get_condition(const graphic& gra, char *condition, condition_type& cond)
 		i++;
 	}
 	// change vertex index to continuous
-	unordered_map<unsigned short, unsigned short> vertex_name = gra.get_vertex_name();		// ÕâÀïÓĞ¿ªÏú
+	unordered_map<unsigned short, unsigned short> vertex_name = gra.get_vertex_name();		// è¿™é‡Œæœ‰å¼€é”€
 	cond.start = vertex_name[cond.start];
 	cond.end = vertex_name[cond.end];
 	for(int i=0; i<cond.pass.size(); i++)
 		cond.pass[i] = vertex_name[cond.pass[i]];
 }
 
-//ÄãÒªÍê³ÉµÄ¹¦ÄÜ×ÜÈë¿Ú
+//ä½ è¦å®Œæˆçš„åŠŸèƒ½æ€»å…¥å£
 void search_route(char *graph[5000], int edge_num, char *condition)
 {
-    vector<unsigned short> answer(600, -1);		// ÏÈ·ÖÅä×ã¹»ÄÚ´æ
-    int ed_num = 0;								// answer ÖĞÓĞ¼¸Ìõ±ß
+    vector<unsigned short> answer(600, -1);		// å…ˆåˆ†é…è¶³å¤Ÿå†…å­˜
+    int ed_num = 0;								// answer ä¸­æœ‰å‡ æ¡è¾¹
 
-    graphic 		gra(graph, edge_num);	// ½âÎö³öÍ¼
+    graphic 		gra(graph, edge_num);	// è§£æå‡ºå›¾
     condition_type 	cond;
-    get_condition(gra, condition, cond);	// ½âÎö³öÌõ¼ş
+    get_condition(gra, condition, cond);	// è§£æå‡ºæ¡ä»¶
 
     //cout << gra;
 
@@ -136,8 +136,8 @@ void find_path(graphic& gra, condition_type& cond, vector<unsigned short>& answe
 {
 	int shortest_dist = graphic::MAX_DIST;
 
-	vector<unsigned short> path;			// ¼ÇÂ¼»î¶¯¶¥µã
-	vector<unsigned short> edge;			// ¼ÇÂ¼»î¶¯µÄ±ß
+	vector<unsigned short> path;			// è®°å½•æ´»åŠ¨é¡¶ç‚¹
+	vector<unsigned short> edge;			// è®°å½•æ´»åŠ¨çš„è¾¹
 
 	gra.get_data()[cond.start].known = true;
 	gra.get_data()[cond.start].dist = 0;
