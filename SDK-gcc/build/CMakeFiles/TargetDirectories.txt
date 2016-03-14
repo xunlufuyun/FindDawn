@@ -1,3 +1,0 @@
-/home/xiaoming/work/huawei/FindDawn/SDK-gcc/build/CMakeFiles/edit_cache.dir
-/home/xiaoming/work/huawei/FindDawn/SDK-gcc/build/CMakeFiles/rebuild_cache.dir
-/home/xiaoming/work/huawei/FindDawn/SDK-gcc/build/CMakeFiles/future_net.dir

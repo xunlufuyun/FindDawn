@@ -2,7 +2,6 @@
 #include "route.h"
 #include "lib_record.h"
 #include <stdio.h>
-#include <unordered_set>
 #include <algorithm>
 
 using namespace std;
@@ -51,11 +50,11 @@ void search_route(char *graph[5000], int edge_num, char *condition)
     vector<unsigned short> answer(600, -1);		// 先分配足够内存
     int ed_num = 0;								// answer 中有几条边
 
-    graphic 		gra(graph, edge_num);	// 解析出图
+    graphic 		gra(graph, edge_num);		// 解析出图
     condition_type 	cond;
-    get_condition(gra, condition, cond);	// 解析出条件
+    get_condition(gra, condition, cond);		// 解析出条件
 
-    //cout << gra;
+    cout << gra;
 
    	find_path(gra, cond, answer, ed_num);
     if(ed_num > 0)
@@ -100,16 +99,12 @@ void find_path_help(graphic& gra, condition_type& cond, int& shortest_dist, vect
 {
 	if(curr_node == cond.end)
 	{
-		//if(is_valid_path(path, cond) && gra.get_data()[curr_node].dist < shortest_dist)
 		if(gra.get_data()[curr_node].dist < shortest_dist && is_valid_path(path, cond))
 		{
 			shortest_dist = gra.get_data()[curr_node].dist;
 			edge_num = edge.size();
 			copy(edge.begin(), edge.end(), answer.begin());
-			/*cout << "solution : ";
-			for(auto i : edge)
-				cout << i << " ";
-			cout << endl;*/
+			cout << "get a result .............." << endl;
 		}
 		return;
 	}
@@ -144,10 +139,4 @@ void find_path(graphic& gra, condition_type& cond, vector<unsigned short>& answe
 	path.push_back(cond.start);
 
 	find_path_help(gra, cond, shortest_dist, path, edge, answer, edge_num, cond.start);
-
-	/*cout << "dist : " << shortest_dist << endl;
-	cout << "path : ";
-	for(auto i : answer)
-		cout << i << " ";
-	cout << endl;*/
 }
