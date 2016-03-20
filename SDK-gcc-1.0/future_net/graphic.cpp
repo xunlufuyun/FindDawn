@@ -1,5 +1,10 @@
 #include "graphic.h"
 
+graphic::graphic()
+	: vertex_name(), data()
+{
+}
+
 graphic::graphic(char* gra[], int edge_num)
 {
 	unsigned short edge = 0;

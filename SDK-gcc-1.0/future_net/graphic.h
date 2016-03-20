@@ -35,10 +35,16 @@ public:
 		{}
 	};
 
+	graphic();
 	graphic(char* gra[], int edge_num);
 
 	static const int MAX_DIST = INT_MAX;
 	static const short NO_PATH = -1;
+
+	std::unordered_map<unsigned short, unsigned short>& get_vertex_name()
+	{
+		return vertex_name;
+	}
 
 	const std::unordered_map<unsigned short, unsigned short>& get_vertex_name() const
 	{
@@ -46,6 +52,11 @@ public:
 	}
 
 	std::vector<node_type>& get_data()
+	{
+		return data;
+	}
+
+	const std::vector<node_type>& get_data() const
 	{
 		return data;
 	}
